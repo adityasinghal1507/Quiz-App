@@ -1,0 +1,103 @@
+:root {
+  --navy: #0b1f3a;
+  --blue: #1a3a6b;
+  --blue-mid: #24508a;
+  --gold: #c9a227;
+  --gold-light: #e8c547;
+  --gold-deep: #9a7b1a;
+  --white: #ffffff;
+  --off-white: #f7f9fc;
+  --text: #132238;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, #1e4a86 0%, var(--navy) 55%, #061224 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px 64px;
+}
+
+h1 {
+  margin: 0 0 28px;
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 12px;
+}
+
+#quiz {
+  width: min(640px, 100%);
+  background: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 32px 28px 28px;
+  box-shadow:
+    0 12px 32px rgba(6, 18, 36, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+#question {
+  margin: 0 0 22px;
+  color: var(--navy);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#options button {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--navy);
+  background: var(--off-white);
+  border: 1px solid #c5d0e0;
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+}
+
+#options button:hover,
+#options button:focus-visible {
+  background: #eef4fb;
+  border-color: var(--gold);
+  border-left-color: var(--gold);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+#options button:active {
+  transform: translateY(0);
+  background: #e4edf8;
+}
+
+#result {
+  width: min(640px, 100%);
+  margin: 24px 0 0;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  min-height: 1.4em;
+}
